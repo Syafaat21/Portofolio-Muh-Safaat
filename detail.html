@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Python</title>
+	<link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<style>
+		.project-container {
+			background-color: white;
+			max-width: 1200px;
+			margin: 0 auto;
+			box-shadow: 0 0 30px rgba(0,0,0,0.1);
+		}
+		.full-width-image {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.breadcrumb {
+			padding: 20px;
+			background-color: #f8f9fa;
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 14px;
+		}
+		.breadcrumb a {
+			color: black;
+			text-decoration: none;
+		}
+		.breadcrumb a:hover {
+			text-decoration: underline;
+		}
+		.project-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-size: 50pt;
+			transform: translate(-50%, -50%);
+			color: white;
+			text-align: center;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+		.image-container {
+			position: relative;
+		}
+		
+		/* Slider Styles */
+		.project-slider {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+		}
+		.slider-container {
+			display: flex;
+			transition: transform 0.5s ease;
+			width: 300%;
+		}
+		.slider-slide {
+			width: 33.33%;
+			flex-shrink: 0;
+		}
+		.slider-slide img {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.slider-controls {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 10px;
+		}
+		.slider-dot {
+			width: 10px;
+			height: 10px;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 50%;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.slider-dot.active {
+			background-color: white;
+		}
+		
+		/* Slider Checkbox Hack */
+		.slider-toggle {
+			display: none;
+		}
+		#slide1:checked ~ .slider-container {
+			transform: translateX(0);
+		}
+		#slide2:checked ~ .slider-container {
+			transform: translateX(-33.33%);
+		}
+		#slide3:checked ~ .slider-container {
+			transform: translateX(-66.66%);
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="../index.html#contact">contact</a></li>
+			<li>works</li>
+			<li>expertience</li>
+			<li class="empty"></li>
+			<li>behance</li>
+			<li><a href="https://x.com/home/@Muh_safaat210" target="_blank">twitter</a></li>
+			<li>linkedin</li>
+		</ul>
+	</nav>
+
+	<div class="project-container">
+		<div class="image-container">
+			<img src="img/python2.jpg" class="full-width-image" alt="Python Project">
+			<h1 class="project-title">Python</h1>
+		</div>
+		<div class="breadcrumb">
+			<a href="../index.html">Home</a> Python
+		</div>
+		<section class="project" style="padding-top: 50px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Objective</h2>
+						<p>Tujuan utama Python adalah untuk menyederhanakan proses pengembangan perangkat lunak melalui kode yang ringkas, jelas, dan mudah dipelihara. Python dirancang agar pengembang dapat lebih fokus pada logika pemecahan masalah daripada terjebak dalam kompleksitas sintaks. Selain itu, Python juga bertujuan untuk mendukung produktivitas dan kolaborasi tim, karena kode Python yang bersih dan terbaca memudahkan pemahaman lintas programmer. Dengan pustaka standar yang luas dan ekosistem yang terus berkembang, Python memungkinkan pengembangan berbagai jenis aplikasi tanpa harus membangun semuanya dari nol.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Benefit</h2>
+						<p>Python memiliki banyak manfaat yang membuatnya sangat digemari oleh pengembang di seluruh dunia:</p>
+						<ol>
+							<li>Python dirancang dengan sintaks yang sederhana dan mudah dipahami, menjadikannya pilihan yang sangat baik untuk pemula yang baru memulai perjalanan pemrograman.</li>
+							<li>Python dilengkapi dengan berbagai pustaka (library) dan framework yang membantu mempercepat proses pengembangan aplikasi, seperti Django untuk pengembangan web, TensorFlow untuk machine learning, dan Pandas untuk analisis data.</li>
+							<li>Python bersifat open-source, yang berarti siapa saja dapat mengunduh, menggunakan, dan memodifikasi kode sumbernya secara gratis, memberikan fleksibilitas tinggi bagi pengembang.</li>
+							<li>Komunitas Python yang besar sangat membantu, dengan banyak dokumentasi, tutorial, dan forum yang memudahkan pengguna untuk belajar dan mengatasi masalah.</li>
+							<li>Python dapat dijalankan di berbagai sistem operasi, seperti Windows, macOS, dan Linux, tanpa memerlukan perubahan besar pada kode, menjadikannya sangat fleksibel dalam pengembangan lintas platform.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>History</h2>
+						<p>Python pertama kali dikembangkan oleh Guido van Rossum pada akhir 1980-an dan dirilis pertama kali pada tahun 1991. Nama Python sendiri diambil dari sebuah acara komedi populer yang disukai van Rossum, Monty Python's Flying Circus, yang mencerminkan filosofi bahasa ini yang sederhana namun efektif. Seiring berjalannya waktu, Python terus berkembang dengan menambahkan berbagai fitur baru, menjadikannya salah satu bahasa pemrograman yang paling banyak digunakan di dunia saat ini. Versi terbaru Python terus mendukung integrasi dengan berbagai teknologi baru, seperti machine learning, big data, dan pengembangan web.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Challenge</h2>
+						<p>Meskipun Python merupakan bahasa pemrograman yang sangat populer dan memiliki banyak keunggulan, terdapat beberapa tantangan yang dihadapi dalam penggunaannya:</p>
+						<ol>
+							<li>Karena Python merupakan bahasa yang diinterpretasikan, proses eksekusinya cenderung lebih lambat dibandingkan bahasa yang dikompilasi seperti C atau C++.</li>
+							<li>Struktur data Python yang fleksibel dan manajemen memori otomatis membuatnya lebih boros memori, yang bisa menjadi kendala pada aplikasi berskala besar atau perangkat dengan sumber daya terbatas.</li>
+							<li>Python tidak dirancang khusus untuk pengembangan aplikasi mobile, sehingga dukungan pustaka dan performanya masih kalah dibandingkan platform native seperti Kotlin atau Swift.</li>
+							<li>Mendistribusikan aplikasi Python sebagai file executable bisa menjadi rumit, terutama jika bergantung pada banyak pustaka eksternal atau lingkungan virtual tertentu.</li>
+							<li>Karena kode Python umumnya dalam bentuk script yang mudah dibaca, cukup sulit untuk menyembunyikan atau mengamankan logika aplikasi dari pihak yang tidak diinginkan.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Project Gallery</h2>
+						<div class="project-slider">
+							<input type="radio" name="slider" id="slide1" class="slider-toggle" checked>
+							<input type="radio" name="slider" id="slide2" class="slider-toggle">
+							<input type="radio" name="slider" id="slide3" class="slider-toggle">
+							
+							<div class="slider-container">
+								<div class="slider-slide">
+									<img src="./img/python3.jpg" alt="Python Project">
+								</div>
+								<div class="slider-slide">
+									<img src="./img/python4.jpg" alt="Python Project">
+								</div>
+								<div class="slider-slide">
+									<img src="./img/python5.jpg" alt="Python Project">
+								</div>
+							</div>
+							
+							<div class="slider-controls">
+								<label for="slide1" class="slider-dot"></label>
+								<label for="slide2" class="slider-dot"></label>
+								<label for="slide3" class="slider-dot"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer id="contact">
+		<h2>Interested in<br>
+			learning more?<br>safaat21@gmail.com</h2>
+			<p>designed & developed by Muh Safaat 2025</p>
+		</footer>
+	</body>
+	</html>

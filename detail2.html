@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML</title>
+	<link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<style>
+		.project-container {
+			background-color: white;
+			max-width: 1200px;
+			margin: 0 auto;
+			box-shadow: 0 0 30px rgba(0,0,0,0.1);
+		}
+		.full-width-image {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.breadcrumb {
+			padding: 20px;
+			background-color: #f8f9fa;
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 14px;
+		}
+		.breadcrumb a {
+			color: black;
+			text-decoration: none;
+		}
+		.breadcrumb a:hover {
+			text-decoration: underline;
+		}
+		.project-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-size: 40pt;
+			transform: translate(-50%, -50%);
+			color: white;
+			text-align: center;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+		.image-container {
+			position: relative;
+		}
+		
+		/* Slider Styles */
+		.project-slider {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+		}
+		.slider-container {
+			display: flex;
+			transition: transform 0.5s ease;
+			width: 300%;
+		}
+		.slider-slide {
+			width: 33.33%;
+			flex-shrink: 0;
+		}
+		.slider-slide img {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.slider-controls {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 10px;
+		}
+		.slider-dot {
+			width: 10px;
+			height: 10px;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 50%;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.slider-dot.active {
+			background-color: white;
+		}
+		
+		/* Slider Checkbox Hack */
+		.slider-toggle {
+			display: none;
+		}
+		#slide1:checked ~ .slider-container {
+			transform: translateX(0);
+		}
+		#slide2:checked ~ .slider-container {
+			transform: translateX(-33.33%);
+		}
+		#slide3:checked ~ .slider-container {
+			transform: translateX(-66.66%);
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="../index.html#contact">contact</a></li>
+			<li>works</li>
+			<li>expertience</li>
+			<li class="empty"></li>
+			<li>behance</li>
+			<li><a href="https://x.com/home/@Muh_safaat210" target="_blank">twitter</a></li>
+			<li>linkedin</li>
+		</ul>
+	</nav>
+
+	<div class="project-container">
+		<div class="image-container">
+			<img src="./img/html2.jpg" class="full-width-image" alt="HTML Project">
+			<h1 class="project-title">HTML<br>HyperText Markup Language</h1>
+		</div>
+		<div class="breadcrumb">
+			<a href="../index.html">Home</a> / HTML
+		</div>
+		<section class="project" style="padding-top: 50px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Objective</h2>
+						<p>HTML dibuat dengan tujuan utama untuk menyusun dan menampilkan konten pada halaman web. Bahasa ini memungkinkan pengembang untuk membuat struktur dasar sebuah halaman, seperti teks, gambar, tautan, tabel, dan elemen-elemen lainnya yang ditampilkan di browser. HTML tidak bersifat pemrograman logika, melainkan berfungsi sebagai bahasa markup yang menandai bagian-bagian tertentu dalam dokumen. Dengan HTML, informasi dapat disusun dengan cara yang logis dan mudah diakses oleh pengguna serta mesin pencari. Tujuannya juga mencakup keterbacaan dokumen di berbagai perangkat dan kemudahan dalam pengembangan situs web.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Benefit</h2>
+						<p>HTML memberikan banyak manfaat dalam dunia pengembangan web. Berikut ini adalah manfaat utamanya:</p>
+						<ol>
+							<li>HTML menyediakan kerangka atau struktur dasar yang digunakan untuk menampilkan informasi di internet.</li>
+							<li>Sintaks HTML cukup sederhana dan mudah dipahami, bahkan oleh orang yang baru mengenal dunia pengembangan web.</li>
+							<li>HTML didukung oleh semua browser modern, sehingga halaman yang dibuat dengan HTML dapat diakses secara luas.</li>
+							<li>HTML dapat dikombinasikan dengan CSS untuk styling dan JavaScript untuk interaktivitas, menjadikannya fondasi utama dalam pengembangan web.</li>
+							<li>Dengan struktur HTML yang baik, halaman web dapat dengan mudah diindeks oleh mesin pencari, yang meningkatkan visibilitas situs.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>History</h2>
+						<p>HTML pertama kali dikembangkan oleh Tim Berners-Lee pada tahun 1989 sebagai bagian dari proyek World Wide Web di CERN. Versi awal HTML hanya memungkinkan pembuatan dokumen sederhana dengan teks dan hyperlink. Seiring berjalannya waktu, HTML terus diperbarui untuk mendukung elemen-elemen multimedia seperti gambar, video, audio, dan form input. Versi terbaru, HTML5, dirilis resmi pada tahun 2014 oleh W3C dan membawa banyak peningkatan, seperti kemampuan menyematkan video tanpa plugin, penyimpanan lokal di browser, dan dukungan elemen semantik. HTML5 menjadi standar modern dalam pengembangan aplikasi web interaktif.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Challenge</h2>
+						<p>Meskipun HTML sangat penting dalam pembangunan web, ada beberapa tantangan yang dihadapi:</p>
+						<ol>
+							<li>HTML sendiri tidak mampu menangani logika pemrograman seperti perulangan atau kondisi. Oleh karena itu, perlu dikombinasikan dengan bahasa lain seperti JavaScript untuk menciptakan halaman web interaktif.</li>
+							<li>Untuk membuat tampilan menarik dan fungsional, HTML harus dikombinasikan dengan teknologi lain. Tanpa CSS dan JavaScript, tampilan web akan sangat dasar.</li>
+							<li>Kesalahan dalam penulisan HTML tidak selalu menghasilkan pesan kesalahan yang jelas, yang bisa menyebabkan tampilan web tidak seperti yang diharapkan.</li>
+							<li>Perbedaan interpretasi HTML oleh browser tertentu bisa menjadi tantangan, meskipun hal ini semakin berkurang dengan standar modern.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Project Gallery</h2>
+						<div class="project-slider">
+							<input type="radio" name="slider" id="slide1" class="slider-toggle" checked>
+							<input type="radio" name="slider" id="slide2" class="slider-toggle">
+							<input type="radio" name="slider" id="slide3" class="slider-toggle">
+							
+							<div class="slider-container">
+								<div class="slider-slide">
+									<img src="./img/html3.jpg" alt="HTML Project">
+								</div>
+								<div class="slider-slide">
+									<img src="./img/html4.jpg" alt="HTML Project">
+								</div>
+								<div class="slider-slide">
+									<img src="./img/html5.jpg" alt="HTML Project">
+								</div>
+							</div>
+							
+							<div class="slider-controls">
+								<label for="slide1" class="slider-dot"></label>
+								<label for="slide2" class="slider-dot"></label>
+								<label for="slide3" class="slider-dot"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer id="contact">
+		<h2>Interested in<br>
+			learning more?<br>safaat21@gmail.com</h2>
+			<p>designed & developed by Muh Safaat 2025</p>
+		</footer>
+	</body>
+	</html>

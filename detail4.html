@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript</title>
+	<link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<style>
+		.project-container {
+			background-color: white;
+			max-width: 1200px;
+			margin: 0 auto;
+			box-shadow: 0 0 30px rgba(0,0,0,0.1);
+		}
+		.full-width-image {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.breadcrumb {
+			padding: 20px;
+			background-color: #f8f9fa;
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 14px;
+		}
+		.breadcrumb a {
+			color: black;
+			text-decoration: none;
+		}
+		.breadcrumb a:hover {
+			text-decoration: underline;
+		}
+		.project-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-size: 50pt;
+			transform: translate(-50%, -50%);
+			color: white;
+			text-align: center;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+		.image-container {
+			position: relative;
+		}
+		
+		/* Slider Styles */
+		.project-slider {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+		}
+		.slider-container {
+			display: flex;
+			transition: transform 0.5s ease;
+			width: 300%;
+		}
+		.slider-slide {
+			width: 33.33%;
+			flex-shrink: 0;
+		}
+		.slider-slide img {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.slider-controls {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 10px;
+		}
+		.slider-dot {
+			width: 10px;
+			height: 10px;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 50%;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.slider-dot.active {
+			background-color: white;
+		}
+		
+		/* Slider Checkbox Hack */
+		.slider-toggle {
+			display: none;
+		}
+		#slide1:checked ~ .slider-container {
+			transform: translateX(0);
+		}
+		#slide2:checked ~ .slider-container {
+			transform: translateX(-33.33%);
+		}
+		#slide3:checked ~ .slider-container {
+			transform: translateX(-66.66%);
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="../index.html#contact">contact</a></li>
+			<li>works</li>
+			<li>expertience</li>
+			<li class="empty"></li>
+			<li>behance</li>
+			<li><a href="https://x.com/home/@Muh_safaat210" target="_blank">twitter</a></li>
+			<li>linkedin</li>
+		</ul>
+	</nav>
+
+	<div class="project-container">
+		<div class="image-container">
+			<img src="img/Javascript2.jpg" class="full-width-image" alt="JavaScript Project">
+			<h1 class="project-title">JavaScript</h1>
+		</div>
+		<div class="breadcrumb">
+			<a href="../index.html">Home</a> JavaScript
+		</div>
+		<section class="project" style="padding-top: 50px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Objective</h2>
+						<p>JavaScript diciptakan untuk menambahkan interaktivitas pada halaman web. Jika HTML menyusun struktur dan CSS mengatur tampilan, maka JavaScript memberikan “nyawa” agar halaman menjadi dinamis. Tujuannya adalah memungkinkan pengguna berinteraksi secara langsung dengan elemen web seperti menekan tombol, mengisi formulir, melihat popup, dan merespons gerakan tanpa harus memuat ulang halaman. Kini, JavaScript tak hanya terbatas pada sisi klien (client-side), tetapi juga digunakan di sisi server melalui Node.js, menjadikannya bahasa pemrograman serbaguna.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Benefit</h2>
+						<p>JavaScript memberikan sejumlah manfaat yang menjadikannya penting dalam dunia pengembangan aplikasi modern, antara lain:</p>
+						<ol>
+							<li>JavaScript memungkinkan pembuatan elemen interaktif seperti menu dropdown, slider, validasi formulir, animasi, hingga efek visual real-time.</li>
+							<li>Dengan bantuan framework seperti React, Vue, atau Angular, JavaScript mendukung pembuatan aplikasi yang berjalan tanpa reload halaman.</li>
+							<li>Karena JavaScript dijalankan langsung di browser, interaksi pengguna bisa diproses dengan cepat tanpa menunggu tanggapan dari server.</li>
+							<li>JavaScript dapat digunakan untuk pengembangan front-end, back-end (dengan Node.js), aplikasi mobile (dengan React Native), bahkan aplikasi desktop (dengan Electron).</li>
+							<li>JavaScript memiliki pustaka (library) dan framework yang sangat banyak serta komunitas global yang aktif, sehingga mudah mendapatkan dukungan dan sumber belajar.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>History</h2>
+						<p>JavaScript dikembangkan dalam waktu hanya 10 hari oleh Brendan Eich pada tahun 1995, saat bekerja di Netscape. Awalnya diberi nama Mocha, lalu berganti menjadi LiveScript, sebelum akhirnya resmi dikenal sebagai JavaScript. Meski namanya mirip Java, keduanya tidak memiliki hubungan langsung. Dalam perkembangannya, JavaScript berevolusi dari bahasa skrip sederhana menjadi kekuatan utama dalam pengembangan web modern. Standarnya terus diperbarui oleh organisasi ECMA, dengan versi terbaru dikenal sebagai ECMAScript (ES6, ES7, dst.), yang membawa berbagai fitur canggih seperti arrow function, async/await, modul, dan class.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Challenge</h2>
+						<p>Meskipun sangat populer, JavaScript juga memiliki sejumlah tantangan, antara lain:</p>
+						<ol>
+							<li>Walaupun sebagian besar browser modern mendukung JavaScript dengan baik, ada perbedaan perilaku pada implementasi tertentu yang bisa menyulitkan pengembang.</li>
+							<li>Karena dijalankan di sisi klien, JavaScript rentan terhadap serangan seperti XSS (Cross-site Scripting) jika tidak ditangani dengan baik.</li>
+							<li>Jika tidak ditulis dengan struktur yang baik, proyek JavaScript bisa menjadi kompleks, sulit dibaca, dan susah dipelihara (terutama tanpa framework atau modularisasi).</li>
+							<li>Jika pengguna menonaktifkan JavaScript di browser mereka (meskipun jarang), banyak fungsi halaman web tidak akan bekerja.</li>
+							<li>Penggunaan JavaScript yang berlebihan, seperti animasi berat atau pemanggilan DOM berulang, dapat memperlambat halaman dan merusak pengalaman pengguna.</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Project Gallery</h2>
+						<div class="project-slider">
+							<input type="radio" name="slider" id="slide1" class="slider-toggle" checked>
+							<input type="radio" name="slider" id="slide2" class="slider-toggle">
+							<input type="radio" name="slider" id="slide3" class="slider-toggle">
+							
+							<div class="slider-container">
+								<div class="slider-slide">
+									<img src="./img/Javascript3.jpg" alt="JavaScript Project">
+								</div>
+								<div class="slider-slide">
+									<img src="./img/Javascript4.jpg" alt="JavaScript Project">
+								</div>
+								<div class="slider-slide">
+									<img src="./img/Javascript5.jpg" alt="JavaScript Project">
+								</div>
+							</div>
+							
+							<div class="slider-controls">
+								<label for="slide1" class="slider-dot"></label>
+								<label for="slide2" class="slider-dot"></label>
+								<label for="slide3" class="slider-dot"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer id="contact">
+		<h2>Interested in<br>
+			learning more?<br>safaat21@gmail.com</h2>
+			<p>designed & developed by Muh Safaat 2025</p>
+		</footer>
+	</body>
+	</html>
